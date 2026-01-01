@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
@@ -40,7 +41,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun LearnTextAndModifiers(){
     Text(
-        text = "hello world",
+        text = stringResource(R.string.hello_text),
         color = Color.Red,
         fontSize = 32.sp,
         fontStyle = FontStyle.Italic
