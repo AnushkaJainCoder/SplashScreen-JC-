@@ -12,7 +12,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.splashscreenjc.ui.theme.SplashScreenJcTheme
 
@@ -23,10 +26,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SplashScreenJcTheme {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Greeting(
-                        name = "Android",
-                    )
+                Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    LearnTextAndModifiers()
                 }
             }
         }
@@ -34,17 +38,11 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun LearnTextAndModifiers(){
     Text(
-        text = "Hello $name!",
-        modifier = modifier
+        text = "hello world",
+        color = Color.Red,
+        fontSize = 32.sp,
+        fontStyle = FontStyle.Italic
     )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    SplashScreenJcTheme {
-        Greeting("Android")
-    }
 }
